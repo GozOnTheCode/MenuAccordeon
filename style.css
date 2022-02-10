@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    transform: translateY(20%);
+    height: 70vh;
+    width: 60%;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.woman {
+    width: 400px;
+    margin-left: -70px;
+    margin-top: 60px;
+}
+
+.background-img {
+    width: 450px;
+    position: absolute;
+    top: -8%;
+    left: -5%;
+}
+
+.menu {
+    margin-left: 150px;
+    margin-top: 7%;
+}
+
+.h1-faq {
+    color: hsl(236, 14%, 19%);
+    font-family: Kumbh Sans;
+    font-weight: bolder;
+}
+
+/* menu arcordeon */
+
+.accordion {
+    max-width: 800px;
+    margin-top: 10%;
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 0px;
+}
+
+.accordion .contentBx .label {
+    transition: .4s;
+    position: relative;
+    background: transparent;
+    color: hsl(240, 6%, 50%);
+    font-family: Kumbh Sans;
+    cursor: pointer;
+    border-bottom: solid 1px hsl(237, 12%, 33%);
+    padding-bottom: 4%;
+}
+
+.accordion .contentBx .label::before {
+    transition: .8s;
+    content: url(./images/icon-arrow-down.svg);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-80%);
+    font-size: 1.5rem;
+}
+
+.accordion .contentBx .content {
+    position: relative;
+    background: #fff;
+    height: 0;
+    margin-top: 2%;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content {
+    height: 50px;
+}
+
+.accordion .contentBx .content p {
+    color: hsl(237, 12%, 33%);
+    font-family: Kumbh Sans;
+    font-size: 14px;
+}
+
+.accordion .contentBx.active .label {
+    color: hsl(238, 29%, 16%);
+}
+
+.accordion .contentBx .label:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.accordion .contentBx.active .label::before {
+    transition: .8s;
+    content: url(./images/icon-arrow-down.svg);
+    top: -8%;
+    transform: rotate(180deg);
+}
+
+.cube {
+    position: absolute;
+    top: 40%;
+    left: -8%;
+}
+
+@media screen and (min-width: 390px) and (min-height: 844px) {
+    .container {
+        width: 90%;
+        height: 80vh;
+        overflow: visible;
+    }
+    .cube {
+        display: none;
+    }
+    .background-img {
+        display: none;
+    }
+    .div-image {
+        margin-left: 120px;
+        margin-top: -160px;
+    }
+    .woman {
+        width: 250px;
+    }
+    .menu {
+        margin-left: -280px;
+        margin-top: 150px;
+    }
+    .contentBx {
+        font-size: 12px;
+        
+    }
+}
